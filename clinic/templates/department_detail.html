@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ department.name }} Department</title>
+</head>
+<body>
+    <h1>{{ department.name }} Department</h1>
+    <ul>
+        {% for doctor in doctors %}
+            <li>
+                <strong>{{ doctor.name }}</strong><br>
+                Department: {{ doctor.department }}<br>
+                Qualification: {{ doctor.qualification }}<br>
+                <img src="{{ doctor.photo.url }}" alt="{{ doctor.name }}" width="200">
+            </li>
+        {% empty %}
+            <li>No doctors in this department.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

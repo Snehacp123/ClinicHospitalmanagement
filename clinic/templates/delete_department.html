@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Department</title>
+</head>
+<body>
+    <h1>Delete Department</h1>
+    <p>Are you sure you want to delete "{{ department.name }}" department?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>
